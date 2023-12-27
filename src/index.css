@@ -36,7 +36,7 @@ body {
   max-width: 30rem;
   margin: 2rem auto;
   border-radius: 4px;
-  background: linear-gradient(180deg, #307e6c, #2b996d);
+  background: linear-gradient(180deg, #2b996d, #2b996d);
 }
 
 .input-group {
@@ -49,8 +49,7 @@ body {
   display: block;
   margin-bottom: 0.25rem;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 0.5rem;
-  font-weight: bold;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
@@ -60,7 +59,7 @@ body {
   border: 1px solid #76c0ae;
   border-radius: 0.25rem;
   background-color: transparent;
-  color: #c2e9e0;
+  color: #c2e9d0;
   font-size: 1rem;
 }
 
@@ -74,14 +73,14 @@ body {
 }
 
 #result thead {
-  font-size: 0.7rem;
-  color: #83e6c0;
+  font-size: 1rem;
+  color: #f7fdfb;
 }
 
 #result tbody {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 0.85rem;
-  color: #c2e9e0;
+  font-size: 2rem;
+  color: #070b0a;
 }
 
 .center {
