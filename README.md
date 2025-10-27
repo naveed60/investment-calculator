@@ -40,6 +40,36 @@ Input Fields:
 Initial investment amount
 Annual interest rate (in percentage)
 Number of years
+import React, { useState, useMemo } from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { DollarSign, TrendingUp, Calendar, Percent } from 'lucide-react';
+
+export default function InvestmentCalculator() {
+  const [initialAmount, setInitialAmount] = useState(10000);
+  const [monthlyContribution, setMonthlyContribution] = useState(500);
+  const [years, setYears] = useState(10);
+  const [returnRate, setReturnRate] = useState(7);
+  const [compoundFrequency, setCompoundFrequency] = useState('monthly');
+
+  const compoundingPeriods = {
+    'annually': 1,
+    'semi-annually': 2,
+    'quarterly': 4,
+    'monthly': 12,
+    'daily': 365
+  };
+
+  const calculateInvestment = useMemo(() => {
+    const r = returnRate / 100;
+    const n = compoundingPeriods[compoundFrequency];
+    const t = years;
+    const P = initialAmount;
+    const PMT = monthlyContribution;
+    
+    let chartData = [];
+    let totalInvested = P;
+    let balance = P;
+
 Compounding frequency (e.g., annually, monthly, etc.)
 Calculate Future Value:
 
